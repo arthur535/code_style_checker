@@ -2,7 +2,8 @@
 
 <hr>
 
-
+Code style helps to ensure the linear development of the project, significantly speeds up the adaptation of new employees and, in general, forms and educates the development culture. It is very important to write the code in right style so as not to irritate the eyes of other developers so that they can understand a lot at a glance at the code.  
+_____________________________________________________________________________________
 Description of VECTORS.HPP
 
 There are 6 vectors in vectors.hpp file
@@ -19,18 +20,15 @@ There are 6 vectors in vectors.hpp file
 6) Vector "std_vec"
   In "std_vec" vector are kept some important keywords and functions, which belong to std namespace.
   
-  
 Description of STD.HPP
 
 There is only one function in std.hpp - using_std. It return true if user used "using namespace std" in code.
 using_std function has 3 strings - 3 words of user code. Аfter each iteration the strings go forward in onwe word. If their combination is "using namespace std;", it returns true.
 
-
 Description of TYPE_CHECK.HPP
 
 Function type_check takes two std::string arguments, and, if first argument is in "type" or "complex_types" vectors, returns true;
 It also adds new types to vector "type" or "complex_types".
-
 
 Description of SNAKE.HPP
 
@@ -50,4 +48,6 @@ These three functions check if names of classes, structs and unions starts with 
 9)check_identifiers_first_symbol -- if everything is ok with identifiers first symbol
 10)before_type -- before type can be only storage class and CV qualifiers keywords.
 
+Description of CHECK.HPP
+This is "main" function of style checker. All the other functions are included into this one. Function check opens file and begin to read it. When it is problem with style, function returns error and the description of it.
 <hr>
