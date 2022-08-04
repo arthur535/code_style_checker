@@ -4,6 +4,7 @@
 
 
 Description of VECTORS.HPP
+
 There are 6 vectors in vectors.hpp file
 1) Vector "identifiers
  "Vector "identifiers" involves variable and function names, which were used in users' code.
@@ -20,28 +21,33 @@ There are 6 vectors in vectors.hpp file
   
   
 Description of STD.HPP
+
 There is only one function in std.hpp - using_std. It return true if user used "using namespace std" in code.
 using_std function has 3 strings - 3 words of user code. Аfter each iteration the strings go forward in onwe word. If their combination is "using namespace std;", it returns true.
 
 
 Description of TYPE_CHECK.HPP
+
 Function type_check takes two std::string arguments, and, if first argument is in "type" or "complex_types" vectors, returns true;
 It also adds new types to vector "type" or "complex_types".
 
 
 Description of SNAKE.HPP
+
 snake_case function exists to check if your variables and function names are written in snake_case. If in variables or function names are capital letters, function will return false.
 
 Description of FUNCTIONS.HPP
+
 1)struct_name_with_capital
 2)class_name_with_capital
 3)union_name_with_capital
 These three functions check if names of classes, structs and unions starts with a capital letter
-4)std_check--if user don't have "using namespace std" in code and there are keywords or functions, which belong to std namespace, function will return false. 
-5)one_letter--if variables or function names ha
-directives--if there are few spaces after directives
-type_after_type--if you wrote one type after second
-fill_identifiers--fill identifiers in vector
-check_identifiers_first_symbol--if everything is ok with identifiers
-before_type
+4)std_check -- if user don't have "using namespace std" in code and there are keywords or functions, which belong to std namespace, function will return false. 
+5)one_letter -- if variables or function names have only one letter, then it is false.
+6)directives -- if there are few spaces after directives
+7)type_after_type -- if you wrote one type after second
+8)fill_identifiers -- fill variable and function names in vector "identifiers"
+9)check_identifiers_first_symbol -- if everything is ok with identifiers first symbol
+10)before_type -- before type can be only storage class and CV qualifiers keywords.
+
 <hr>
