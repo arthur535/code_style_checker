@@ -28,7 +28,7 @@ bool type_check (std::string& str1, std::string& str2) {
             }
             return true;
         }//in case of pointers
-        else if ( (str1.find(type[i]) == 0) && (str1[str1.size()-1] == '&')) {
+        else if ( (0 == str1.find(type[i])) && ('&' == str1[str1.size()-1])) {
             bool already_in = true;
             for (int i = 0; i < type.size(); ++i) {
                 if (str1 == type[i]) {
@@ -43,7 +43,7 @@ bool type_check (std::string& str1, std::string& str2) {
         if (str1 == complex_types[i]) {
             return true;
         }
-        else if ( (str1.find(complex_types[i]) == 0) && (str1[str1.size()-1] == '*')) {
+        else if ( (0 == str1.find(complex_types[i])) && ('*' == str1[str1.size()-1])) {
             bool already_in = true;
             for (int i = 0; i < complex_types.size(); ++i) {
                 if (str1 == complex_types[i]) {
@@ -55,7 +55,7 @@ bool type_check (std::string& str1, std::string& str2) {
             }
             return true;
         }//in case of pointers
-        else if ( (str1.find(complex_types[i]) == 0) && (str1[str1.size()-1] == '&')) {
+        else if ( (0 == str1.find(complex_types[i])) && ('&' == str1[str1.size()-1])) {
             bool already_in = true;
             for (int i = 0; i < complex_types.size(); ++i) {
                 if (str1 == complex_types[i]) {
