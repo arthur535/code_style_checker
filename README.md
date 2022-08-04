@@ -49,5 +49,6 @@ These three functions check if names of classes, structs and unions starts with 
 10)before_type -- before type can be only storage class and CV qualifiers keywords.
 
 Description of CHECK.HPP
+
 This is "main" function of style checker. All the other functions are included into this one. Function check opens file and begin to read it. When it is problem with style, function returns error and the description of it.
 <hr>
