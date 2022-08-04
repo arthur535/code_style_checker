@@ -12,7 +12,6 @@ bool type_after_type(std::string&, std::string&);//if you wrote one type after s
 void fill_identifiers(std::string&, std::string&);//fill identifiers in vector
 bool check_identifiers_first_symbol();//if everything is ok with identifiers
 bool before_type(std::string&, std::string&);
-void func_arg(std::string&, std::string&);
 
 
 //implementation of functions
@@ -59,6 +58,13 @@ bool std_check(std::string& str1) {
 bool one_letter(std::string& str1, std::string& str2) {
     for (int i = 0; i < type.size(); ++i) {
         if (str1 == type[i]) {
+            if (1 == str2.size()) {
+                return false;
+            }
+        }
+    }
+    for (int i = 0; i < complex_types.size(); ++i) {
+        if (str1 == complex_types[i]) {
             if (1 == str2.size()) {
                 return false;
             }
