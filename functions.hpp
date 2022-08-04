@@ -10,7 +10,7 @@ bool one_letter(std::string&, std::string&);
 bool directives(std::string&, std::string&);//if there are few spaces after directives
 bool type_after_type(std::string&, std::string&);//if you wrote one type after second
 void fill_identifiers(std::string&, std::string&);//fill identifiers in vector
-bool check_identifiers();//if everything is ok with identifiers
+bool check_identifiers_first_symbol();//if everything is ok with identifiers
 bool before_type(std::string&, std::string&);
 void func_arg(std::string&, std::string&);
 
@@ -48,7 +48,7 @@ bool union_name_with_capital(std::string& str1, std::string& str2) {
 
 bool std_check(std::string& str1) {
     for (int i = 0; i < std_vec.size(); ++i) {
-        if (str1.find(std_vec[i]) == 0) {
+        if (0 == str1.find(std_vec[i])) {
             return false;
         }
     }
@@ -59,7 +59,7 @@ bool std_check(std::string& str1) {
 bool one_letter(std::string& str1, std::string& str2) {
     for (int i = 0; i < type.size(); ++i) {
         if (str1 == type[i]) {
-            if (str2.size() == 1) {
+            if (1 == str2.size()) {
                 return false;
             }
         }
@@ -163,7 +163,7 @@ bool check_identifiers_first_symbol() {
         return true;
     }
     int i = (int)identifiers.size()-1;
-    if ( !((identifiers[i][0] >= 'a') && (identifiers[i][0] <= 'z')) && !((identifiers[i][0] >= 'A') && (identifiers[i][0] <= 'Z')) && (identifiers[i][0] != '_') && (identifiers[i][0] != '&')) {
+    if (!((identifiers[i][0] >= 'a') && (identifiers[i][0] <= 'z')) && !((identifiers[i][0] >= 'A') && (identifiers[i][0] <= 'Z')) && (identifiers[i][0] != '_') && (identifiers[i][0] != '&') && (identifiers[i][0] != '$')) {
         return false;
     }
     return true;
